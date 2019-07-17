@@ -208,14 +208,14 @@ function tripal_sra_menu() {
   $items['admin/tripal/extension/tripal_sra'] = array(
     'title' => 'Tripal SRA',
     'description' => 'A module for management of NGS samples like NCBI SRA.',
-    'access arguments' => array('administer'),
+    'access arguments' => array('administer site configuration'),
   );
 
   // === help === 
   $items['admin/tripal/extension/tripal_sra/help'] = array(
     'title' => 'Tripal SRA Help',
     'description' => 'Document for how to use Tripal SRA.',
-    'access arguments' => array('administer'),
+    'access arguments' => array('administer site configuration'),
     'weight' => 10,
   );
 
@@ -234,7 +234,7 @@ function tripal_sra_menu() {
   $items['admin/tripal/extension/tripal_sra/bioproject/configuration'] = array(
     'title' => 'Settings',
     'description' => 'Manage Tripal SRA: BioPorject settings and configurations.',
-    'access arguments' => array('administer'),
+    'access arguments' => array('administer site configuration'),
     'page callback' => 'drupal_get_form',
     'page arguments' => array('tripal_bioproject_admin'),
     'type' => MENU_LOCAL_TASK,
@@ -245,7 +245,7 @@ function tripal_sra_menu() {
   $items['admin/tripal/extension/tripal_sra/bioproject/chado_bioproject_toc'] = array(
     'title' => 'TOC',
     'description' => 'Manage the table of contents for BioProject nodes.',
-    'access arguments' => array('administer'),
+    'access arguments' => array('administer site configuration'),
     'page callback' => 'drupal_get_form',
     'page arguments' => array('tripal_core_content_type_toc_form', 'chado_bioproject'),
     'file' => 'includes/tripal_core.toc.inc',
@@ -258,7 +258,7 @@ function tripal_sra_menu() {
   $items['admin/tripal/extension/tripal_sra/bioproject/help'] = array(
     'title' => 'Help',
     'description' => "A description of the Tripal BioProject content type including a short description of it's usage.",
-    'access arguments' => array('administer'),
+    'access arguments' => array('administer site configuration'),
     'page callback' => 'theme',
     'page arguments' => array('tripal_bioproject_help'),
     'type' => MENU_LOCAL_TASK,
@@ -268,7 +268,7 @@ function tripal_sra_menu() {
   // bioproject enable view.
   $items['admin/tripal/extension/tripal_sra/bioproject/views/bioprojects/enable'] = array(
     'title' => 'Enable Biosample Administrative View',
-    'access arguments' => array('administer'),
+    'access arguments' => array('administer site configuration'),
     'page callback' => 'tripal_enable_view',
     'page arguments' => array(
       'tripal_biosample_admin_bioproject',
@@ -283,7 +283,7 @@ function tripal_sra_menu() {
   $items['admin/tripal/extension/tripal_sra/biosample'] = array(
     'title' => 'SRA BioSample',
     'description' => 'Descriptions of biological source materials used in experimental assays.',
-    'access arguments' => array('administer'),
+    'access arguments' => array('administer site configuration'),
     'page callback' => 'tripal_biosample_admin_biosamples_view',
     'type' => MENU_NORMAL_ITEM,
   );
