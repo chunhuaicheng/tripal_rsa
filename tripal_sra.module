@@ -225,7 +225,7 @@ function tripal_sra_menu() {
   $items['admin/tripal/extension/tripal_sra/bioproject'] = array(
     'title' => 'SRA BioProject',
     'description' => 'A collection of biological data related to a single initiative, originating from a single organization or from a consortium.',
-    'access arguments' => array('administer'),
+    'access arguments' => array('administer site configuration'),
     'page callback' => 'tripal_bioproject_admin_bioprojects_view',
     'type' => MENU_NORMAL_ITEM,
   );
