@@ -5,7 +5,8 @@
 // This conditional is added to prevent errors in the experiment TOC admin page.
 if (property_exists($variables['node'],'experiment')) {
   $experiment = $variables['node']->experiment;
-    
+  drupal_set_title($experiment->name);
+
   ?>
   <div class="tripal_experiment-data-block-desc tripal-data-block-desc"></div>
   <?php
@@ -63,7 +64,7 @@ if (property_exists($variables['node'],'experiment')) {
 
 
   // allow site admins to see the experiment ID
-  if (user_access('view ids')) {
+  if (user_access('view ids') || user_access('administer tripal')) {
     // Experiment ID
     $rows[] = array(
       array(

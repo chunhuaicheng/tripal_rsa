@@ -172,8 +172,8 @@ function flat_experiment_parser($path) {
       $experiment_headers['sample_name'] = $i;
       continue;
     }
-    if (preg_match("/(short description)/", $header)) {
-      $experiment_headers['short description'] = $i;
+    if (preg_match("/(short_description)/", $header)) {
+      $experiment_headers['short_description'] = $i;
       continue;
     }
     if (preg_match("/(design_description)/", $header)) {

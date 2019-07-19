@@ -42,7 +42,7 @@ if (property_exists($variables['node'],'bioproject')) {
   */
 
   // allow site admins to see the biomaterial ID
-  if (user_access('view ids')) {
+  if (user_access('view ids') || user_access('administer tripal')) {
     // Biomaterial ID
     $rows[] = array(
       array(
